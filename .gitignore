@@ -1,0 +1,62 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log
+dist/
+build/
+.DS_Store
+*.log
+# OS
+Thumbs.db
+# VSCode
+.vscode/
+# Misc
+*.tgz
+.idea/
+
+# Test files and directories
+test/
+tests/
+__tests__/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+test-*.js
+test_*.js
+*-test.js
+*_test.js
+
+# Demo and development files
+demo.html
+example.html
+sample.html
+*-demo.*
+*-example.*
+*-sample.*
+minimal-*.js
+quick-*.js
+
+# Backup files
+*.backup
+*.bak
+*.old
+*_backup.*
+*_old.*
+backup_*/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# User uploads and data
+uploads/
+user_data/
+assets/*/
+
+# Cache and logs
+cache/
+logs/
+.cache/

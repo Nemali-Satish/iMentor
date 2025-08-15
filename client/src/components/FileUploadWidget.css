@@ -1,0 +1,103 @@
+/* FileUploadWidget.css */
+.file-upload-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.file-upload-widget h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0 0 0 0; /* Adjusted margin */
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+.choose-files-btn, .upload-btn {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    background-color: var(--secondary-bg);
+    color: var(--text-primary);
+    text-align: center;
+}
+.choose-files-btn:hover:not(:disabled), .upload-btn:hover:not(:disabled) {
+    background-color: var(--border-color);
+}
+.choose-files-btn:disabled, .upload-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.upload-btn {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+.upload-btn:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+}
+.status-message {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 8px 0;
+}
+.selected-files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 5px 0;
+    margin: 0;
+}
+.file-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: var(--border-color);
+    border-radius: var(--border-radius-small);
+    font-size: 0.85rem;
+}
+.file-preview-name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-primary);
+}
+.file-preview-status {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+.remove-file-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+.remove-file-btn:hover {
+    color: #f44336;
+}
+.file-preview-item.uploading .file-preview-status {
+    color: #90caf9;
+}
+.file-preview-item.success {
+    border-left: 3px solid #52c41a;
+}
+.file-preview-item.success .file-preview-status {
+    color: #52c41a;
+}
+.file-preview-item.error {
+    border-left: 3px solid #f44336;
+}
+.file-preview-item.error .file-preview-status {
+    color: #f44336;
+}
